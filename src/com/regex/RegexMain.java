@@ -28,13 +28,18 @@ public class RegexMain {
 		System.out.println(emailId);
 		// method call to validate user email id
 		validate.validateFirstName(emailId);
-		
+
 		System.out.println("Enter mobile number: ");
 		String mobNumber = scan.nextLine();
 		System.out.println(mobNumber);
 		// method call to validate user mobile number
 		validate.validaeMobileNum(mobNumber);
 
+		System.out.println("Enter password with minimum 8 character: ");
+		String password = scan.nextLine();
+		System.out.println(password);
+		// method call to validate user password
+		validate.validaeMobileNum(password);
 
 	}
 

@@ -33,6 +33,13 @@ public class ValidateUserRegistration {
 		validation(mobNumberPattern, mobNumber);
 	}
 
+	// method: validate user password
+	public void validatePassword(String password) {
+		// password pattern
+		String passwordPattern = "^[a-zA-Z]{8,}$";
+		validation(passwordPattern, password);
+	}
+
 	public static void validation(String pattern, String UserInput) {
 		if (UserInput.matches(pattern)) { // check Input and Pattern
 			System.out.println("'" + UserInput + "'" + " validation success !");
