@@ -26,6 +26,13 @@ public class ValidateUserRegistration {
 		validation(emailPattern, emailId);
 	}
 
+	// method: validate user mobile number
+	public void validaeMobileNum(String mobNumber) {
+		// pattern
+		String mobNumberPattern = "^[0-9]{2}[ ]+[0-9]{10}";
+		validation(mobNumberPattern, mobNumber);
+	}
+
 	public static void validation(String pattern, String UserInput) {
 		if (UserInput.matches(pattern)) { // check Input and Pattern
 			System.out.println("'" + UserInput + "'" + " validation success !");
