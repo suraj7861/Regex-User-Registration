@@ -10,11 +10,18 @@ public class RegexMain {
 		Scanner scan = new Scanner(System.in);
 		//create object 
 		ValidateUserRegistration validate = new ValidateUserRegistration();
+		
 		System.out.println("Enter First name: ");
 		String firstName = scan.nextLine();
 		System.out.println(firstName);
 		//method call to validate user first name
 		validate.validateFirstName(firstName);
+		
+		System.out.println("Enter Last name: ");
+		String lastName = scan.nextLine();
+		System.out.println(lastName);
+		//method call to validate user first name
+		validate.validateFirstName(lastName);
 
 	}
 
