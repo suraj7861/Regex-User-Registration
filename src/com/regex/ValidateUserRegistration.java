@@ -1,28 +1,36 @@
 package com.regex;
 
+import java.util.regex.Pattern;
+
 public class ValidateUserRegistration {
 
 	// method: validate user first name
-	public boolean validateFirstName(String name) {
-		String pattern = "^[A-Z]{1}[a-z,A-Z]{2,}";
-		if (name.matches(pattern)) {
-			System.out.println("'" + name + "'" + " validation success !");
-			return true;
-		} else {
-			System.out.println("'" + name + "'" + " validation unsuccessful ! ");
-			return false;
-		}
+	public void validateFirstName(String firstName) {
+		String firstNamePattern = "^[A-Z]{1}[a-z,A-Z]{2,}";
+		Pattern pattern = Pattern.compile(firstName);
+		validation(firstNamePattern, firstName);
 	}
 
 	// method: validate user last name
-	public static boolean validateLastName(String name) {
-		String pattern = "^[A-Z]{1}[a-z,A-Z]{2,}";
-		if (name.matches(pattern)) {
-			System.out.println("'" + name + "'" + " validation success !");
-			return true;
+	public static void validateLastName(String lastName) {
+		String lastNamePattern = "^[A-Z]{1}[a-z,A-Z]{2,}";
+		Pattern pattern = Pattern.compile(lastName);
+		validation(lastNamePattern, lastName);
+	}
+
+	// method: validate user Email Id
+	public static void validateEmail(String emailId) {
+		// email validation pattern
+		String emailPattern = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*[@]{1}[a-z]+[.]{1}[a-z]{2,4}[.]*[a-z]*{2}$";
+		Pattern pattern = Pattern.compile(emailPattern);
+		validation(emailPattern, emailId);
+	}
+
+	public static void validation(String pattern, String UserInput) {
+		if (UserInput.matches(pattern)) { // check Input and Pattern
+			System.out.println("'" + UserInput + "'" + " validation success !");
 		} else {
-			System.out.println("'" + name + "'" + " validation unsuccessful ! ");
-			return false;
+			System.out.println("'" + UserInput + "'" + " validation success !");
 		}
 	}
 
