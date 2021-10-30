@@ -35,7 +35,7 @@ public class RegexMain {
 		// method call to validate user mobile number
 		validate.validaeMobileNum(mobNumber);
 
-		System.out.println("Enter password with Rule1 minimum 8 character: ");
+		System.out.println("Enter password minimum 8 character: ");
 		String password = scan.nextLine();
 		System.out.println(password);
 		// method call to validate user password
