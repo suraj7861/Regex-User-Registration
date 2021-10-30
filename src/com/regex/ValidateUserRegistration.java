@@ -36,7 +36,7 @@ public class ValidateUserRegistration {
 	// method:  validate user password
 	public void validatePassword(String password) {
 		// password pattern
-		String passwordPattern = "^((?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,})$";
+		String passwordPattern = "^(?=.*[0-9])(?=.*[@#$%^&!])(?=.*[A-Z])(?=.*[a-z]).{8,}$"; 
 		validation(passwordPattern, password);
 	}
 	
