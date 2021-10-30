@@ -27,7 +27,7 @@ public class RegexMain {
 		String emailId = scan.nextLine();
 		System.out.println(emailId);
 		// method call to validate user email id
-		validate.validateFirstName(emailId);
+		validate.validateEmail(emailId);
 
 		System.out.println("Enter mobile number: ");
 		String mobNumber = scan.nextLine();
@@ -39,7 +39,7 @@ public class RegexMain {
 		String password = scan.nextLine();
 		System.out.println(password);
 		// method call to validate user password
-		validate.validaeMobileNum(password);
+		validate.validatePassword(password);
 
 	}
 

@@ -21,7 +21,7 @@ public class ValidateUserRegistration {
 	// method: validate user Email Id
 	public static void validateEmail(String emailId) {
 		// email validation pattern
-		String emailPattern = "^[a-zA-z0-9]+([.][a-zA-z0-9]+)*@[a-zA-z]+.[a-z]{2,3}([.][a-z]{2,3})*$";
+		String emailPattern = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*[@]{1}[a-z]+[.]{1}[a-z]{2,4}[.]*[a-z]*{2}$";
 		Pattern pattern = Pattern.compile(emailPattern);
 		validation(emailPattern, emailId);
 	}
