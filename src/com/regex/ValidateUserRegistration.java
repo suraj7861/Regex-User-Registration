@@ -7,14 +7,12 @@ public class ValidateUserRegistration {
 	// method: validate user first name
 	public void validateFirstName(String firstName) {
 		String firstNamePattern = "^[A-Z]{1}[a-z,A-Z]{2,}";
-		Pattern pattern = Pattern.compile(firstName);
 		validation(firstNamePattern, firstName);
 	}
 
 	// method: validate user last name
 	public static void validateLastName(String lastName) {
 		String lastNamePattern = "^[A-Z]{1}[a-z,A-Z]{2,}";
-		Pattern pattern = Pattern.compile(lastName);
 		validation(lastNamePattern, lastName);
 	}
 
@@ -22,7 +20,6 @@ public class ValidateUserRegistration {
 	public static void validateEmail(String emailId) {
 		// email validation pattern
 		String emailPattern = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*[@]{1}[a-z]+[.]{1}[a-z]{2,4}[.]*[a-z]*{2}$";
-		Pattern pattern = Pattern.compile(emailPattern);
 		validation(emailPattern, emailId);
 	}
 
@@ -41,8 +38,9 @@ public class ValidateUserRegistration {
 	}
 	
 
-	public static void validation(String pattern, String UserInput) {
-		if (UserInput.matches(pattern)) { // check Input and Pattern
+	public static void validation(String checkPattern, String UserInput) {
+		Pattern pattern = Pattern.compile(UserInput);
+		if (UserInput.matches(checkPattern)) { // check Input and Pattern
 			System.out.println("'" + UserInput + "'" + " validation success !");
 		} else {
 			System.out.println("'" + UserInput + "'" + " validation not success !");
