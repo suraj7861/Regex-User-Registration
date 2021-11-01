@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class UserRegistrationTest {
-	//------------Test Cases for First Name Validation--------
+	// ------------Test Cases for First Name Validation--------
 	@Test
 	public void givenFirstName_WhenProper_ShouldReturnHappy() {
 		ValidateUserRegistration userValidation = new ValidateUserRegistration();
@@ -21,7 +21,7 @@ public class UserRegistrationTest {
 		Assert.assertEquals(expectedValue, first_name);
 	}
 
-	//------------Test Cases for Last Name Validation--------
+	// ------------Test Cases for Last Name Validation--------
 	@Test
 	public void givenLastName_WhenProper_ShouldReturnHappy() {
 		ValidateUserRegistration userValidation = new ValidateUserRegistration();
@@ -38,7 +38,7 @@ public class UserRegistrationTest {
 		Assert.assertEquals(expectedValue, last_name);
 	}
 
-	//------------Test Cases for Email Validation--------
+	// ------------Test Cases for Email Validation--------
 	@Test
 	public void validateEmailAddress_WhenValid_ShouldReturnHappy() {
 		ValidateUserRegistration userValidation = new ValidateUserRegistration();
@@ -72,7 +72,7 @@ public class UserRegistrationTest {
 		Assert.assertEquals(expectedValue, phoneNo);
 	}
 
-	//-------- Test Cases for Password Validation --------
+	// -------- Test Cases for Password Validation --------
 	@Test
 	public void validatePassword_WhenValid_ShouldReturnHappy() {
 		ValidateUserRegistration userValidation = new ValidateUserRegistration();
@@ -97,5 +97,8 @@ public class UserRegistrationTest {
 		Assert.assertEquals(expectedValue, password);
 	}
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> UC11_Junit_Parameterized_Email_Test

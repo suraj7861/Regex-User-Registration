@@ -20,7 +20,12 @@ public class ValidateUserRegistration {
 	public static String validateEmail(String emailId) {
 		// email validation pattern
 		String emailPattern = "^[a-zA-Z0-9]+[.(a-zA-Z0-9)]*[@]{1}[a-z]+[.]{1}[a-z]{2,4}[.]*[a-z]*{2}$";
-		return validation(emailPattern, emailId);
+		Pattern pattern = Pattern.compile(emailId);
+		if (emailId.matches(emailPattern)) { // check Input and Pattern
+			return "Happy";
+		} else {
+			return "Sad";
+		}
 	}
 
 	// method: validate user mobile number
@@ -30,13 +35,12 @@ public class ValidateUserRegistration {
 		return validation(mobNumberPattern, mobNumber);
 	}
 
-	// method:  validate user password
+	// method: validate user password
 	public String validatePassword(String password) {
 		// password pattern
-		String passwordPattern = "^(?=.*[0-9])(?=.*[@#$%^&!])(?=.*[A-Z])(?=.*[a-z]).{8,}$"; 
+		String passwordPattern = "^(?=.*[0-9])(?=.*[@#$%^&!])(?=.*[A-Z])(?=.*[a-z]).{8,}$";
 		return validation(passwordPattern, password);
 	}
-	
 
 	public static String validation(String checkPattern, String UserInput) {
 		Pattern pattern = Pattern.compile(UserInput);
@@ -44,7 +48,7 @@ public class ValidateUserRegistration {
 			return "Happy";
 		} else {
 			return "Sad";
-		}	
+		}
 	}
 
 }
